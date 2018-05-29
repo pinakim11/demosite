@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "noLib": true,
+        "target": "es5",
+        "baseUrl": "./",
+        "paths": {
+            "*" : ["./*", "modules/*", "../types/*"]
+        }
+    },
+    "typeAcquisition": {
+        "enable": true
+    },
+    "include": [
+        "../types/*.d.ts",
+        "../types/**/*.d.ts",
+        "./app_controllers/**/*.js",
+        "./app_core/**/*.js",
+        "./app_pipelines/**/*.js",
+        "./int_training/**/*.js",
+    ]
+}

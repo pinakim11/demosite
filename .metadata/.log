@@ -1,0 +1,54 @@
+!SESSION 2018-05-29 13:38:36.104 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_161
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-05-29 13:39:07.369
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\User'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.demandware.studio.urlhandler 1 0 2018-05-29 13:39:08.383
+!MESSAGE HTTP protocol handler server socket started.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 10 2018-05-29 13:44:12.919
+!MESSAGE Updating the index from remote failed. ; version: 1.100.0.v20160217-0435
+!STACK 0
+org.apache.http.client.ClientProtocolException
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at org.apache.http.client.fluent.Executor.execute(Executor.java:206)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.downloadDatabase(IO.java:171)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerProblemsHistory$UpdateIndexJob.run(ServerProblemsHistory.java:279)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.apache.http.client.CircularRedirectException: Circular redirect to 'http://mirror.kakao.com/eclipse/technology/epp/logging/problems.zip'
+	at org.apache.http.impl.client.DefaultRedirectStrategy.getLocationURI(DefaultRedirectStrategy.java:174)
+	at org.apache.http.impl.client.DefaultRedirectStrategy.getRedirect(DefaultRedirectStrategy.java:217)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:119)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	... 6 more
+
+!ENTRY com.demandware.studio.serversupport 4 0 2018-05-29 14:10:20.488
+!MESSAGE Could not delete configuration file for 'app_controllers'
+
+!ENTRY com.demandware.studio.serversupport 4 0 2018-05-29 14:10:20.504
+!MESSAGE Could not delete configuration file for 'app_core'
+
+!ENTRY com.demandware.studio.serversupport 4 0 2018-05-29 14:10:20.512
+!MESSAGE Could not delete configuration file for 'app_pipelines'
+
+!ENTRY org.eclipse.core.jobs 4 2 2018-05-29 14:10:20.540
+!MESSAGE An internal error occurred during: "Updating referenced projects".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.core.internal.resources.ProjectDescription.copyAndRemoveDuplicates(ProjectDescription.java:139)
+	at org.eclipse.core.internal.resources.ProjectDescription.setReferencedProjects(ProjectDescription.java:869)
+	at com.demandware.studio.cartridge.BeehiveServerResourceHandler$3.runInWorkspace(Unknown Source)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)

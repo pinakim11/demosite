@@ -1,0 +1,7 @@
+{
+    "hostname": "dev04-jp-asics.demandware.net",
+    "username": "thao.hoang",
+    "password": "Admin@123",
+    "cartridge": ["int_training","app_controllers","app_pipelines","app_core"],
+    "code-version": "version1"
+}
